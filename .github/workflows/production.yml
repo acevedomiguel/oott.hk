@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   
@@ -11,9 +11,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Build Hugo
-      uses: lowply/build-hugo@v0.72.0
 
     - name: rsync deployments
       run: |
